@@ -10,10 +10,10 @@ const store=createStore(movies);
 console.log('store',store);
 console.log('BeforeState',store.getState());
 
-store.dispatch({
-    type: 'ADD_MOVIES',
-    movies:[{name: 'Superman'}]
-});
+// store.dispatch({//Dispatch takes an object as an argument (Action Object)
+//     type: 'ADD_MOVIES',
+//     movies:[{name: 'Superman'}]
+// });
 
-console.log('AfterState',store.getState());
-ReactDOM.render(<App />, document.getElementById("root"));
+// console.log('AfterState',store.getState());
+ReactDOM.render(<App store={store}/>, document.getElementById("root"));
