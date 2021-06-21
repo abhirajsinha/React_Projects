@@ -1,14 +1,20 @@
 import React, { Component } from "react";
-import { addfavourite } from "../actions";
+import { addfavourite, removeFromFavourites } from "../actions";
 import { data } from "../data";
 import Navbar from "./Navbar";
 
 export default class MovieCard extends Component {
   handleFavouriteCLick = () => {
-    const { movie, isFavourite } = this.props;
+    const { movie } = this.props;
     this.props.dispatch(addfavourite(movie));
   };
-  handleUnFavouriteCLick = () => {};
+
+  handleUnFavouriteCLick = () => {
+    const { movie } = this.props;
+    this.props.dispatch(removeFromFavourites(movie));
+  };
+
+  // handleUnFavouriteCLick = () => {};
   render() {
     const { movie, isFavourite } = this.props;
     return (
