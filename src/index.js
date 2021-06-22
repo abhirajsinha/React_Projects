@@ -4,11 +4,11 @@ import {createStore} from 'redux';
 
 import "./index.css";
 import App from "./components/App";
-import movies from "./reducers";
+import rootReducer from "./reducers";
 
-const store=createStore(movies);
-console.log('store',store);
-console.log('BeforeState',store.getState());
+const store=createStore(rootReducer);
+// console.log('store',store);
+// console.log('BeforeState',store.getState());
 
 // store.dispatch({//Dispatch takes an object as an argument (Action Object)
 //     type: 'ADD_MOVIES',
