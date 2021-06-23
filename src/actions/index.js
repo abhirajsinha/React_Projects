@@ -31,3 +31,7 @@ export function setShowFavourites(val) {
     val: val,
   };
 }
+
+export default handleMovieSearch(movie){
+  
+}
